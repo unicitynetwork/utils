@@ -49,9 +49,16 @@ function stringToWordArray(string) {
     return CryptoJS.enc.Utf8.parse(string);
 }
 
+function isHexString(str) {
+    return /^[0-9a-fA-F]+$/.test(str);
+}
+
 function hexToWordArray(hexStr){
-    const intVal = hexStr.startsWith('0x')?BigInt(hexStr):BigInt('0x'+hexStr);
-    return bigIntToWordArray(intVal);
+    if(!isHexString(hexStr))
+	throw new Error("This is not hex string: "+hexStr);
+    return CryptoJS.enc.Hex.parse(hexStr);
+//    const intVal = hexStr.startsWith('0x')?BigInt(hexStr):BigInt('0x'+hexStr);
+//    return bigIntToWordArray(intVal);
 }
 
 function wordArrayToHex(wordArray){
@@ -77,6 +84,7 @@ module.exports = {
     hexToWordArray,
     wordArrayToHex,
     isWordArray,
+    isHexString,
     stringToHex,
     normalizeObject
 }
