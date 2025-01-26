@@ -1,0 +1,25 @@
+{
+  "name": "@unicitylabs/utils",
+  "version": "1.2.0",
+  "description": "Basic primitives to work with data structure transformations",
+  "main": "utils.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unicitynetwork/utils.git"
+  },
+  "author": "cryptohog",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unicitynetwork/utils/issues"
+  },
+  "homepage": "https://github.com/unicitynetwork/utils#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
+}
