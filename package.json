@@ -1,6 +1,6 @@
 {
   "name": "@unicitylabs/utils",
-  "version": "1.2.7",
+  "version": "1.2.8",
   "description": "Basic primitives to work with data structure transformations",
   "main": "utils.js",
   "scripts": {
